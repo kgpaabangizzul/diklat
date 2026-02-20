@@ -156,7 +156,7 @@ Eleary/
 
 1. **Clone/Navigate to project**
 ```bash
-cd /home/azeroth/Productivity/Projects/Eleary
+cd /diklat
 ```
 
 2. **Create virtual environment**
