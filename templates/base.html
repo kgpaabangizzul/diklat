@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}E-Leary - Hospital E-Learning & Management System{% endblock %}</title>
+    <title>{% block title %}Diklat - Hospital E-Learning & Management System{% endblock %}</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -235,12 +235,15 @@
             <div class="flex justify-between items-center h-16">
                 <!-- Logo -->
                 <div class="flex items-center gap-3 flex-nowrap whitespace-nowrap shrink-0 min-w-max">
-                    <div class="w-10 h-10 bg-gradient-to-br from-teal-500 via-cyan-500 to-blue-500 rounded-xl flex items-center justify-center shadow-lg shadow-teal-500/30 animate-pulse-slow">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-                        </svg>
+                    <div class="w-10 h-10 bg-gradient-to-br from-teal-500 via-white-500 to-grey-500 rounded-xl flex items-center justify-center shadow-lg shadow-teal-500/30 animate-pulse-slow">
+                         <img src="{{ url_for('static', filename='uploads/logo.png') }}" 
+                                alt="Logo Diklat RSSR" 
+                                class="w-14 h-14 object-contain drop-shadow-lg">
                     </div>
-                    <span class="text-xl font-bold gradient-text whitespace-nowrap leading-none">E-Leary</span>
+                    <span class="flex flex-col items-left leading-tight">
+                    <span class="text-xl font-bold gradient-text whitespace-nowrap leading-none">DIKLAT</span> 
+                    <span class="text-xl font-bold gradient-text whitespace-nowrap leading-none">RSSR</span>
+                     </span>
                 </div>
 
                 <!-- Navigation Links -->
@@ -497,12 +500,21 @@
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div class="md:col-span-1">
                     <div class="flex items-center gap-3 mb-4">
-                        <div class="w-10 h-10 bg-gradient-to-br from-teal-500 via-cyan-500 to-blue-500 rounded-xl flex items-center justify-center">
-                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-                            </svg>
+                        <div class="w-24 h-24 
+                            bg-gradient-to-br from-white-400 to-grey-600
+                            rounded-3xl 
+                            flex items-center justify-center 
+                            shadow-2xl shadow-cyan-500/40
+                            hover:shadow-cyan-500/70
+                            transform hover:scale-210 hover:rotate-3
+                            transition-all duration-500">
+
+                            <img src="{{ url_for('static', filename='uploads/logo.png') }}" 
+                                alt="Logo Diklat RSSR" 
+                                class="w-14 h-14 object-contain drop-shadow-lg">
+
                         </div>
-                        <span class="text-xl font-bold gradient-text">E-Leary</span>
+                        <span class="text-xl font-bold gradient-text">Diklat RSSR</span>
                     </div>
                     <p class="text-sm text-slate-600 dark:text-slate-400 leading-relaxed" data-i18n="footer_tagline">Hospital E-Learning & Management System for modern healthcare education.</p>
                 </div>
@@ -531,7 +543,7 @@
                 </div>
             </div>
             <div class="border-t border-slate-200/50 dark:border-slate-700 mt-10 pt-8">
-                <p class="text-sm text-slate-500 dark:text-slate-400 text-center" data-i18n="footer_copyright">© 2026 RST Slamet Riyadi Solo. All rights reserved. Built with ❤️ for healthcare education.</p>
+                <p class="text-sm text-slate-500 dark:text-slate-400 text-center" data-i18n="footer_copyright">© 2026 IT Diklat RSSR. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -592,7 +604,7 @@
                 footer_legal: 'Legal',
                 footer_privacy: 'Privacy Policy',
                 footer_terms: 'Terms of Service',
-                footer_copyright: '© 2026 RST Slamet Riyadi Solo. All rights reserved. Built with ❤️ for healthcare education.'
+                footer_copyright: '© 2026 IT Diklat RSSR. Seluruh hak cipta.'
             },
             id: {
                 nav_dashboard: 'Dasbor',
@@ -623,7 +635,7 @@
                 footer_legal: 'Hukum',
                 footer_privacy: 'Kebijakan Privasi',
                 footer_terms: 'Syarat Layanan',
-                footer_copyright: '© 2026 RST Slamet Riyadi Solo. Seluruh hak cipta. Dibuat dengan ❤️ untuk pendidikan kesehatan.'
+                footer_copyright: '© 2026 IT Diklat RSSR. Seluruh hak cipta.'
             }
         };
 
